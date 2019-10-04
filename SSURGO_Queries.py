@@ -17,8 +17,6 @@ import pandas as pd
 import xml.etree.ElementTree as EM
 import os
 
-os.chdir('C:\\Users\\abhilam\\Desktop\\Abhi\\KMZ_Data\\')
-
 
 def MUextract(lat,lon):
     
