@@ -85,19 +85,6 @@ def SolDataExtractor(mukey):
         i+=1
     return abc
 
-def main():
-    filename    ='Soil_Data_From_Surgo.csv'
-    lon         = -90
-    lat         = 42
-    [mukey,musym,areasymbol]=MUextract(lat,lon)
-    dictionary  =SolDataExtractor(mukey)
-    DatatoWrite =pd.DataFrame(dictionary)
-    Data        =DatatoWrite[DatatoWrite['comppct_r']==max(DatatoWrite['comppct_r'])]
-    Data.to_csv(filename,header=True,index=False)
-
-if __name__ == "__main__":
-    main()
-
 
 
 
