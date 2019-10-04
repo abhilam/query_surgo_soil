@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan 17 10:57:58 2017
-
-@author: abhilam
-"""
-
-"""
-###########################################################
+@author: Abhishes lamsal
 #Author: Abhishes lamsal
 #Purpose: Extract the mapunit, musymbol, and areasymbol of any given lattitude and longitude
-#necessasry packages
-
+"""
 import json
 import requests
 
@@ -30,6 +24,3 @@ def MUextract(lat,lon):
     return [mukey,musym,areasymbol]
 
 print MUextract(lat,lon)
-
-###############################################
-"""
