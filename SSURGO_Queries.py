@@ -17,23 +17,6 @@ import pandas as pd
 import xml.etree.ElementTree as EM
 import os
 
-
-def MUextract(lat,lon):
-    
-    ##### Converting Lat long to mukey (Map unit key)
-    f             ="&lon="+ str(lon)+"&lat="+ str(lat)
-    ## I use a API from UCDAVIS convert latlong to mukey
-    the_url      = "http://casoilresource.lawr.ucdavis.edu/soil_web/api/ssurgo.php?what=mapunit"+ f
-    data         =requests.get(the_url)
-    datacontent  =json.loads(data.content)[0]
-    mukey        =int(datacontent['mukey'])
-    musym        =datacontent['musym']
-    areasymbol   =datacontent['areasymbol']
-    return [mukey,musym,areasymbol]
-
-
-###############################################
-
 # Queries to import data from SURGO
 def SolDataExtractor(mukey):
     url="https://sdmdataaccess.nrcs.usda.gov/Tabular/SDMTabularService.asmx"
