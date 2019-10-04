@@ -12,7 +12,7 @@ import pandas as pd
 import xml.etree.ElementTree as EM
 import os
 
-from SSURGO_Queries import SolDataExtractor
+from ssurgo_queries import SolDataExtractor
 from Soil_MUKey_Extractor import MUextract
 
 def main():
